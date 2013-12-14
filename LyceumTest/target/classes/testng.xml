@@ -19,5 +19,23 @@
 			</class>
 		</classes>
 	</test>	
+	<test verbose="2" name="testSaveSchedule">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testSaveSchedule" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testCheckWrapper">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testCheckWrapper" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite> 
 

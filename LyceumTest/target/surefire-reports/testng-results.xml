@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="DS suite" duration-ms="39766" started-at="2013-12-14T07:57:16Z" finished-at="2013-12-14T07:57:56Z">
+  <suite name="DS suite" duration-ms="22317" started-at="2013-12-14T08:41:29Z" finished-at="2013-12-14T08:41:51Z">
     <groups>
     </groups>
-    <test name="testAuthentication" duration-ms="26894" started-at="2013-12-14T07:57:16Z" finished-at="2013-12-14T07:57:43Z">
+    <test name="testAuthentication" duration-ms="12760" started-at="2013-12-14T08:41:29Z" finished-at="2013-12-14T08:41:42Z">
       <class name="com.exigen.shegula.tests.DSTestProfile">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="launchBrowser" is-config="true" duration-ms="22539" started-at="2013-12-14T09:57:16Z" finished-at="2013-12-14T09:57:39Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@53c52191]" name="launchBrowser" is-config="true" duration-ms="10175" started-at="2013-12-14T10:41:29Z" finished-at="2013-12-14T10:41:39Z">
           <params>
             <param index="0">
               <value>
@@ -18,19 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="testAuthentication()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="testAuthentication" duration-ms="4058" started-at="2013-12-14T09:57:39Z" finished-at="2013-12-14T09:57:43Z">
+        <test-method status="PASS" signature="testAuthentication()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@53c52191]" name="testAuthentication" duration-ms="2378" started-at="2013-12-14T10:41:39Z" finished-at="2013-12-14T10:41:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAuthentication -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="tearDown" is-config="true" duration-ms="277" started-at="2013-12-14T09:57:43Z" finished-at="2013-12-14T09:57:43Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@53c52191]" name="tearDown" is-config="true" duration-ms="193" started-at="2013-12-14T10:41:42Z" finished-at="2013-12-14T10:41:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
     </test> <!-- testAuthentication -->
-    <test name="testSetProfilePositiv" duration-ms="12845" started-at="2013-12-14T07:57:43Z" finished-at="2013-12-14T07:57:56Z">
+    <test name="testSetProfilePositiv" duration-ms="9537" started-at="2013-12-14T08:41:42Z" finished-at="2013-12-14T08:41:51Z">
       <class name="com.exigen.shegula.tests.DSTestProfile">
-        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="launchBrowser" is-config="true" duration-ms="5366" started-at="2013-12-14T09:57:43Z" finished-at="2013-12-14T09:57:49Z">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@19f70605]" name="launchBrowser" is-config="true" duration-ms="4292" started-at="2013-12-14T10:41:42Z" finished-at="2013-12-14T10:41:46Z">
           <params>
             <param index="0">
               <value>
@@ -41,11 +41,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="testSetProfilePositiv()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="testSetProfilePositiv" duration-ms="7165" started-at="2013-12-14T09:57:49Z" finished-at="2013-12-14T09:57:56Z">
+        <test-method status="PASS" signature="testSetProfilePositiv()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@19f70605]" name="testSetProfilePositiv" duration-ms="5060" started-at="2013-12-14T10:41:46Z" finished-at="2013-12-14T10:41:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetProfilePositiv -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="tearDown" is-config="true" duration-ms="311" started-at="2013-12-14T09:57:56Z" finished-at="2013-12-14T09:57:56Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@19f70605]" name="tearDown" is-config="true" duration-ms="182" started-at="2013-12-14T10:41:51Z" finished-at="2013-12-14T10:41:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
