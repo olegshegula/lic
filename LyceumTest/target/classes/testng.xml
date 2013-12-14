@@ -37,5 +37,23 @@
 			</class>
 		</classes>
 	</test>
+	<test verbose="2" name="testCheckWrapperDirector">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testCheckWrapperDirector" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testCheckWrapperEditDSPage">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testCheckWrapperEditDSPage" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite> 
 

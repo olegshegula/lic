@@ -119,51 +119,63 @@ public class DSTestProfile extends Base {
 		Assert.assertEquals(main.checkBannerLocation(), "Error");
 
 	}
+
+	@Test
+	public void testCheckWrapperDirector() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		main.open("http://178.215.169.205:8081/en/Account/Account/ViewProfile/8");
+		DirectorInfoPage dirInfo = PageFactory.initElements(driver,
+				DirectorInfoPage.class);
+		Assert.assertFalse(dirInfo.checkBannerLocation());
+
+	}
+
+	@Test
+	public void testCheckWrapperGuestPage() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		main.open(Constants.inetURL);
+		GuestPage dirInfo = PageFactory.initElements(driver, GuestPage.class);
+		dirInfo.checkBannerLocation();
+		Assert.assertEquals(dirInfo.checkBannerLocation(), "(292, 662)");
+	}
+
+	@Test
+	public void testCheckWrapperEditDSPage() {
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		main.editClick();
+		EditProfilePage editPage = PageFactory.initElements(driver,
+				EditProfilePage.class);
+		editPage.isPageOpened();
+		Assert.assertEquals(editPage.checkWrapperLocation(), "(283, 727)");
+
+	}
 	/*
-	 * @Test public void testCheckWrapperDirector() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна");
-	 * main.open("http://178.215.169.205:8081/en/Account/Account/ViewProfile/8"
-	 * ); DirectorInfoPage dirInfo = PageFactory.initElements(driver,
-	 * DirectorInfoPage.class);
-	 * Assert.assertFalse(dirInfo.checkBannerLocation());
-	 * 
-	 * }
-	 * 
-	 * @Test public void testCheckWrapperGuestPage() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна");
-	 * main.open(Constants.inetURL); GuestPage dirInfo =
-	 * PageFactory.initElements(driver, GuestPage.class);
-	 * dirInfo.checkBannerLocation();
-	 * Assert.assertEquals(dirInfo.checkBannerLocation(), "(292, 662)"); //
-	 * (283, 933) }
-	 * 
-	 * @Test public void testCheckWrapperEditDSPage() { MainPage mainPage =
-	 * PageFactory.initElements(driver, MainPage.class); mainPage.switchLang(1);
-	 * mainPage.logIn(); LoginPage loginPage = PageFactory.initElements(driver,
-	 * LoginPage.class); Assert.assertTrue(loginPage.isPageOpened());
-	 * loginPage.login(); MainDashboardPage main =
-	 * PageFactory.initElements(driver, MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна"); main.editClick();
-	 * EditProfilePage editPage = PageFactory.initElements(driver,
-	 * EditProfilePage.class); editPage.isPageOpened();
-	 * Assert.assertEquals(editPage.checkWrapperLocation(), "(283, 727)");
-	 * 
-	 * }
-	 * 
 	 * @Test public void testSignOut() {
 	 * 
 	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
