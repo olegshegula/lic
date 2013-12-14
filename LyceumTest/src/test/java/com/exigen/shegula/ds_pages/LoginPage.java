@@ -6,9 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
-
-import com.exigen.shegula.util.Constants;
 import com.exigen.shegula.util.PageBase;
 
 public class LoginPage {
@@ -30,8 +27,8 @@ public class LoginPage {
 
 	public void login() {
 
-		driver.findElement(By.id("Login")).sendKeys(Constants.DSLogin);
-		driver.findElement(By.id("Password")).sendKeys(Constants.DSPassword);
+		driver.findElement(By.id("Login")).sendKeys("testDirector1@mail.ru");
+		driver.findElement(By.id("Password")).sendKeys("12345");
 		submit.click();
 	}
 
