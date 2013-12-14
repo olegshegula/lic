@@ -175,34 +175,41 @@ public class DSTestProfile extends Base {
 		Assert.assertEquals(editPage.checkWrapperLocation(), "(283, 727)");
 
 	}
+
+	@Test
+	public void testSignOut() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		Assert.assertTrue(main.isPageOpened());
+		main.singOut();
+
+	}
+
+	@Test
+	public void testHeader() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		Assert.assertTrue(main.isPageOpened());
+		Assert.assertTrue(main.isHeaderExist());
+
+	}
 	/*
-	 * @Test public void testSignOut() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна");
-	 * Assert.assertTrue(main.isPageOpened()); main.singOut();
-	 * 
-	 * }
-	 * 
-	 * @Test public void testHeader() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна");
-	 * Assert.assertTrue(main.isPageOpened());
-	 * Assert.assertTrue(main.isHeaderExist());
-	 * 
-	 * }
-	 * 
 	 * @Test public void testMainMenuClick() {
 	 * 
 	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
