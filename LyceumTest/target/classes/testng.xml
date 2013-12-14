@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="DS suite">
+	<test verbose="2" name="testAuthentication">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testAuthentication" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testSetProfilePositiv">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testSetProfilePositiv" />
+				</methods>
+			</class>
+		</classes>
+	</test>	
+</suite> 
+

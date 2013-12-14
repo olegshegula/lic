@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="DS suite" duration-ms="39766" started-at="2013-12-14T07:57:16Z" finished-at="2013-12-14T07:57:56Z">
+    <groups>
+    </groups>
+    <test name="testAuthentication" duration-ms="26894" started-at="2013-12-14T07:57:16Z" finished-at="2013-12-14T07:57:43Z">
+      <class name="com.exigen.shegula.tests.DSTestProfile">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="launchBrowser" is-config="true" duration-ms="22539" started-at="2013-12-14T09:57:16Z" finished-at="2013-12-14T09:57:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FF]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testAuthentication()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="testAuthentication" duration-ms="4058" started-at="2013-12-14T09:57:39Z" finished-at="2013-12-14T09:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAuthentication -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@5c244f19]" name="tearDown" is-config="true" duration-ms="277" started-at="2013-12-14T09:57:43Z" finished-at="2013-12-14T09:57:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
+    </test> <!-- testAuthentication -->
+    <test name="testSetProfilePositiv" duration-ms="12845" started-at="2013-12-14T07:57:43Z" finished-at="2013-12-14T07:57:56Z">
+      <class name="com.exigen.shegula.tests.DSTestProfile">
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="launchBrowser" is-config="true" duration-ms="5366" started-at="2013-12-14T09:57:43Z" finished-at="2013-12-14T09:57:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FF]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="testSetProfilePositiv()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="testSetProfilePositiv" duration-ms="7165" started-at="2013-12-14T09:57:49Z" finished-at="2013-12-14T09:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetProfilePositiv -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.exigen.shegula.tests.DSTestProfile@6cb00c4a]" name="tearDown" is-config="true" duration-ms="311" started-at="2013-12-14T09:57:56Z" finished-at="2013-12-14T09:57:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
+    </test> <!-- testSetProfilePositiv -->
+  </suite> <!-- DS suite -->
+</testng-results>
