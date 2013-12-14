@@ -104,6 +104,353 @@
 			</class>
 		</classes>
 	</test>
+	<test verbose="2" name="testSetEngLangPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetEngLangPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testCheckLinksPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testCheckLinksPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetEngLang2Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetEngLang2Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testCheckLinks2Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testCheckLinks2Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMainHeaderExistPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMainHeaderExistPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testAppeatenceOfBlockAboutProfilePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testAppeatenceOfBlockAboutProfilePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testTransitionToEditPagePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToEditPagePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testTransitionToViewPagePhotoClickPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToViewPagePhotoClickPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testTransitionToViewPageByNamePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToViewPageByNamePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testExistenceOfDashboardTitlePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testExistenceOfDashboardTitlePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testDashboardSchedualPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testDashboardSchedualPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testDashboardClassBookPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testDashboardClassBookPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testDashboardNewsPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testDashboardNewsPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testDashboardHomeworkPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testDashboardHomeworkPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testDashboardCirculPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testDashboardCirculPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMainMenuClickPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMainMenuClickPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMainHeaderMainMenuExistPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMainHeaderMainMenuExistPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMyLyceumtesSubMenuPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMyLyceumtesSubMenuPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMyTeachersSubmenuPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMyTeachersSubmenuPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testMyOlympiadsSubmenuPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testMyOlympiadsSubmenuPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testEnteranceSubmenuPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testEnteranceSubmenuPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testContactsSubmenuPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testContactsSubmenuPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testTransitionToTheSchedulePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToTheSchedulePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testTransitionToTheSchedule2Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToTheSchedule2Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testTransitionToTheAllMenuFromSchedulePagePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testTransitionToTheAllMenuFromSchedulePagePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test verbose="2" name="testSetUpProfilePositivePupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositivePupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUpProfilePositive1Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive1Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUpProfilePositive2Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive2Pupil" />
+				</methods>
+			</class> 
+		</classes>
+	</test>
+	<test verbose="2" name="testSetUpProfilePositive3Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive3Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUpProfilePositive4Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive4Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUpProfilePositive5Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive5Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUpProfilePositive6Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive6Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test verbose="2" name="testSetUpProfilePositive7Pupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUpProfilePositive7Pupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+
+	<test verbose="2" name="testSetRusLangPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetRusLangPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSetUkrLangPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSetUkrLangPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite> 
 
 

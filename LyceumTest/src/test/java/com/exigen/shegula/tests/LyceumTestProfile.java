@@ -66,7 +66,7 @@ public class LyceumTestProfile extends Base {
 		Assert.assertTrue(main.checkURL());
 
 	}
-/*
+
 	// US#34 test 34.8.3
 	@Test
 	public void testSetEngLang() {
@@ -79,16 +79,16 @@ public class LyceumTestProfile extends Base {
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.getImagePhoto());
+		Assert.assertTrue(dashboard.getImagePhoto());
 		// /////////////////////////////////////////////////////////
 		EditProfilePage editprof = dashboard.goToEditPage(
 				Constants.EditByXPath, driver);
 
-		assertTrue(editprof.checkAvarar());
-		assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
+		Assert.assertTrue(editprof.checkAvarar());
+		Assert.assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
 		InfoProfilePage infoprof = editprof.setLang("English");
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(infoprof.checkEnglLang().contains(
+		Assert.assertTrue(infoprof.checkEnglLang().contains(
 				"Year of entering: 2013 - 2014"));
 
 	}
@@ -104,22 +104,22 @@ public class LyceumTestProfile extends Base {
 
 			MainDashboardPage dashboard = loginPage.LogInAction(
 					Constants.PupilLogin2, Constants.PupilPassword);
-			assertTrue(dashboard.getImagePhoto());
+			Assert.assertTrue(dashboard.getImagePhoto());
 			// /////////////////////////////////////////////////////////
 			EditProfilePage editprof = dashboard.goToEditPage(
 					Constants.EditByXPath, driver);
 
-			assertTrue(editprof.checkAvarar());
-			assertTrue(editprof.checkPupilName().contains("Шевченко Андрій"));
+			Assert.assertTrue(editprof.checkAvarar());
+			Assert.assertTrue(editprof.checkPupilName().contains("Шевченко Андрій"));
 			InfoProfilePage infoprof = editprof.setLang("English");
 			editprof.FindAndClick(Constants.SaveByID, driver);
-			assertTrue(infoprof.checkEnglLang().contains(
+			Assert.assertTrue(infoprof.checkEnglLang().contains(
 					"Year of entering: 2013 - 2014"));
 
 		}
 
 	@Test
-	public void testSetUpProfilePositive() {
+	public void testSetUpProfilePositivePupil() {
 
 		driver.get(Constants.inetURL);
 
@@ -145,7 +145,7 @@ public class LyceumTestProfile extends Base {
 
 	// Without About me text
 	@Test
-	public void testSetUpProfilePositive1() {
+	public void testSetUpProfilePositive1Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -165,12 +165,12 @@ public class LyceumTestProfile extends Base {
 		editprof.setOthers("My interest more and more");
 		editprof.setAboutMe();
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkAboutMe());
+		Assert.assertTrue(editprof.checkAboutMe());
 	}
 
 	// Without "About me" text and "Interests"
 	@Test
-	public void testSetUpProfilePositive2() {
+	public void testSetUpProfilePositive2Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -189,13 +189,13 @@ public class LyceumTestProfile extends Base {
 		editprof.uncheckAllCheckboxes();
 		editprof.setAboutMe();
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkOtherInterest());
-		assertTrue(editprof.checkAboutMe());
+		Assert.assertTrue(editprof.checkOtherInterest());
+		Assert.assertTrue(editprof.checkAboutMe());
 	}
 
 	// All interest without "Others" is checked and "About me" is set
 	@Test
-	public void testSetUpProfilePositive3() {
+	public void testSetUpProfilePositive3Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -214,12 +214,12 @@ public class LyceumTestProfile extends Base {
 		editprof.setOthers();
 		editprof.setAboutMe("Some information about Me");
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkOtherInterestFull());
-		assertTrue(editprof.checkAboutMeFull());
+		Assert.assertTrue(editprof.checkOtherInterestFull());
+		Assert.assertTrue(editprof.checkAboutMeFull());
 	}
 	
 	@Test
-	public void testSetUpProfilePositive4() {
+	public void testSetUpProfilePositive4Pupil() {
 
 		driver.get(Constants.inetURL);
 
@@ -244,7 +244,7 @@ public class LyceumTestProfile extends Base {
 	}
 	// Without About me text
 	@Test
-	public void testSetUpProfilePositive5() {
+	public void testSetUpProfilePositive5Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -264,12 +264,12 @@ public class LyceumTestProfile extends Base {
 		editprof.setOthers("My interest more and more");
 		editprof.setAboutMe();
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkAboutMe());
+		Assert.assertTrue(editprof.checkAboutMe());
 	}
 
 	// Without "About me" text and "Interests"
 	@Test
-	public void testSetUpProfilePositive6() {
+	public void testSetUpProfilePositive6Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -288,13 +288,13 @@ public class LyceumTestProfile extends Base {
 		editprof.uncheckAllCheckboxes();
 		editprof.setAboutMe();
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkOtherInterest());
-		assertTrue(editprof.checkAboutMe());
+		Assert.assertTrue(editprof.checkOtherInterest());
+		Assert.assertTrue(editprof.checkAboutMe());
 	}
 
 	// All interest without "Others" is checked and "About me" is set
 	@Test
-	public void testSetUpProfilePositive7() {
+	public void testSetUpProfilePositive7Pupil() {
 		driver.get(Constants.inetURL);
 
 		LoginPage loginPage = new LoginPage(driver);
@@ -313,12 +313,12 @@ public class LyceumTestProfile extends Base {
 		editprof.setOthers();
 		editprof.setAboutMe("Some information about Me");
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(editprof.checkOtherInterestFull());
-		assertTrue(editprof.checkAboutMeFull());
+		Assert.assertTrue(editprof.checkOtherInterestFull());
+		Assert.assertTrue(editprof.checkAboutMeFull());
 	}
 
 	@Test
-	public void testCheckLinks() {
+	public void testCheckLinksPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -327,16 +327,16 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.getPupleInfoLink().contains("Іванов Микита"));
-		assertTrue(dashboard.getPupleEditLink().contains("Edit"));
-		assertTrue(dashboard.getSignOutLink().contains("Sign out"));
-		assertTrue(dashboard.getTmInfo().contains("Exigen Agile Practice (c)"));
-		assertTrue(dashboard.getAboutDevLink().contains("Developers page"));
-		assertTrue(dashboard.getVKLink().contains("VK - group"));
+		Assert.assertTrue(dashboard.getPupleInfoLink().contains("Іванов Микита"));
+		Assert.assertTrue(dashboard.getPupleEditLink().contains("Edit"));
+		Assert.assertTrue(dashboard.getSignOutLink().contains("Sign out"));
+		Assert.assertTrue(dashboard.getTmInfo().contains("Exigen Agile Practice (c)"));
+		Assert.assertTrue(dashboard.getAboutDevLink().contains("Developers page"));
+		Assert.assertTrue(dashboard.getVKLink().contains("VK - group"));
 	}
 
 	@Test
-	public void testCheckLinks2() {
+	public void testCheckLinks2Pupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -345,17 +345,17 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin2, Constants.PupilPassword);
 
-		assertTrue(dashboard.getPupleInfoLink().contains("Шевченко Андрій"));
-		assertTrue(dashboard.getPupleEditLink().contains("Edit"));
-		assertTrue(dashboard.getSignOutLink().contains("Sign out"));
-		assertTrue(dashboard.getTmInfo().contains("Exigen Agile Practice (c)"));
-		assertTrue(dashboard.getAboutDevLink().contains("Developers page"));
-		assertTrue(dashboard.getVKLink().contains("VK - group"));
+		Assert.assertTrue(dashboard.getPupleInfoLink().contains("Шевченко Андрій"));
+		Assert.assertTrue(dashboard.getPupleEditLink().contains("Edit"));
+		Assert.assertTrue(dashboard.getSignOutLink().contains("Sign out"));
+		Assert.assertTrue(dashboard.getTmInfo().contains("Exigen Agile Practice (c)"));
+		Assert.assertTrue(dashboard.getAboutDevLink().contains("Developers page"));
+		Assert.assertTrue(dashboard.getVKLink().contains("VK - group"));
 	}
 
 	// US#35 Test 35.1.1
 	@Test
-	public void testMainHeaderExist() {
+	public void testMainHeaderExistPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -364,13 +364,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.getMainHeader());
+		Assert.assertTrue(dashboard.getMainHeader());
 
 	}
 
 	// US#35 test 35.1.2
 	@Test
-	public void testMenuPanelExist() {
+	public void testMenuPanelExistPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -379,13 +379,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkMenuPanel());
+		Assert.assertTrue(dashboard.checkMenuPanel());
 
 	}
 
 	// US#35 test 35.3.1
 	@Test
-	public void testAppeatenceOfBlockAboutProfile() {
+	public void testAppeatenceOfBlockAboutProfilePupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -393,16 +393,16 @@ public class LyceumTestProfile extends Base {
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.getImagePhoto());
-		assertTrue(dashboard.checkNameExist());
-		assertTrue(dashboard.checkEditExist());
-		assertTrue(dashboard.checkSignOutExist());
+		Assert.assertTrue(dashboard.getImagePhoto());
+		Assert.assertTrue(dashboard.checkNameExist());
+		Assert.assertTrue(dashboard.checkEditExist());
+		Assert.assertTrue(dashboard.checkSignOutExist());
 
 	}
 
 	// US#35 test 35.5.1
 	@Test
-	public void testTransitionToEditPage() {
+	public void testTransitionToEditPagePupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -412,19 +412,19 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkNameExist());
+		Assert.assertTrue(dashboard.checkNameExist());
 		EditProfilePage editprof = dashboard.goToEditPage(
 				Constants.EditByXPath, driver);
 
-		assertTrue(editprof.checkAvarar());
-		assertTrue(editprof.checkPupilURL());
+		Assert.assertTrue(editprof.checkAvarar());
+		Assert.assertTrue(editprof.checkPupilURL());
 
 	}
 
 	// US#35 test 35.6.1
 
 	@Test
-	public void testTransitionToViewPagePhotoClick() {
+	public void testTransitionToViewPagePhotoClickPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -434,18 +434,18 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkAvatarExist());
+		Assert.assertTrue(dashboard.checkAvatarExist());
 
 		InfoProfilePage infoprof = dashboard.goToInfoPage(
 				Constants.InfoPhotoByXPath, driver);
 
-		assertTrue(infoprof.checkInfoPupilURL());
+		Assert.assertTrue(infoprof.checkInfoPupilURL());
 
 	}
 
 	// US#35 test 35.6.2
 	@Test
-	public void testTransitionToViewPageByName() {
+	public void testTransitionToViewPageByNamePupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
@@ -455,42 +455,42 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkAvatarExist());
-		assertTrue(dashboard.checkNameExist());
+		Assert.assertTrue(dashboard.checkAvatarExist());
+		Assert.assertTrue(dashboard.checkNameExist());
 
 		InfoProfilePage infoprof = dashboard.goToInfoPage(
 				Constants.InfoNameByXPath, driver);
 
-		assertTrue(infoprof.checkInfoPupilURL());
+		Assert.assertTrue(infoprof.checkInfoPupilURL());
 
 	}
 
 	// US#35 tests: 35.8.1; 35.11.1; 35.13.1;
 
-	public void testExistenceOfDashboardTitle() {
+	public void testExistenceOfDashboardTitlePupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.checkScheduleTitleExist());
-		assertTrue(dashboard.checkClassBookTitleExist());
+		Assert.assertTrue(dashboard.checkScheduleTitleExist());
+		Assert.assertTrue(dashboard.checkClassBookTitleExist());
 
 	}
 
 	// US#35 test 35.7.1
 	@Test
-	public void testDashboardSchedual() {
+	public void testDashboardSchedualPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -499,13 +499,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboardSchedule());
+		Assert.assertTrue(dashboard.checkDashboardSchedule());
 
 	}
 
 	// US#35 test 35.7.1
 	@Test
-	public void testDashboardClassBook() {
+	public void testDashboardClassBookPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -514,13 +514,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboardClassBook());
+		Assert.assertTrue(dashboard.checkDashboardClassBook());
 
 	}
 
 	// US#35 test 35.7.1
 	@Test
-	public void testDashboardNews() {
+	public void testDashboardNewsPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -529,13 +529,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboardNews());
+		Assert.assertTrue(dashboard.checkDashboardNews());
 
 	}
 
 	// US#35 test 35.7.1
 	@Test
-	public void testDashboardHomework() {
+	public void testDashboardHomeworkPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -544,13 +544,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboardHomework());
+		Assert.assertTrue(dashboard.checkDashboardHomework());
 
 	}
 
 	// US#35 test 35.7.1
 	@Test
-	public void testDashboardCircul() {
+	public void testDashboardCirculPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage subm = loginPage.goToLogin(Constants.EnterByLinkText,
@@ -559,13 +559,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboarCircul());
+		Assert.assertTrue(dashboard.checkDashboarCircul());
 
 	}
 
 	// US#35 test 35.4.1; 35.4.2; 35.4.3; 35.4.4;35.4.5 ; 35.4.6;
 	@Test
-	public void testMainMenuClick() {
+	public void testMainMenuClickPupil() {
 
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -577,33 +577,33 @@ public class LyceumTestProfile extends Base {
 
 		dashboard.FindAndClick(Constants.MyLyseiumByXPath, driver);
 
-		assertTrue(dashboard.checkMainDashURL());
+		Assert.assertTrue(dashboard.checkMainDashURL());
 
 		TeachersPage teachers = dashboard.goToPage(Constants.TeachercByXPath,
 				driver);
 
-		assertTrue(teachers.checkTeacherURL());
+		Assert.assertTrue(teachers.checkTeacherURL());
 
 		OlymliadsPage olymp = dashboard.goToPageOlymp(
 				Constants.OlimliadsByXPath, driver);
 
-		assertTrue(olymp.OlymliadsURL());
+		Assert.assertTrue(olymp.OlymliadsURL());
 
 		EnterancePage enterance = dashboard.goToPageEnterance(
 				Constants.EnteranceByXPath, driver);
 
-		assertTrue(enterance.EnteranceURL());
+		Assert.assertTrue(enterance.EnteranceURL());
 
 		ContactsPage contacts = dashboard.goToPageContacts(
 				Constants.ContactsByXPath, driver);
 
-		assertTrue(contacts.ContactsURL());
+		Assert.assertTrue(contacts.ContactsURL());
 
 	}
 
 	// US#34 tests: 34.0.1;34.1.1; 34.1.2
 	@Test
-	public void testMainHeaderMainMenuExist() {
+	public void testMainHeaderMainMenuExistPupil() {
 		// //////////////////////////////////////////////////////////
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -613,18 +613,18 @@ public class LyceumTestProfile extends Base {
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.getImagePhoto());
+		Assert.assertTrue(dashboard.getImagePhoto());
 		// /////////////////////////////////////////////////////////
 		EditProfilePage editprof = dashboard.goToEditPage(
 				Constants.EditByXPath, driver);
-		assertTrue(dashboard.getMainHeader());
-		assertTrue(dashboard.checkMenuPanel());
+		Assert.assertTrue(dashboard.getMainHeader());
+		Assert.assertTrue(dashboard.checkMenuPanel());
 
 	}
 
 	// US#34 test 34.8.1
 	@Test
-	public void testSetRusLang() {
+	public void testSetRusLangPupil() {
 		// //////////////////////////////////////////////////////////
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -634,23 +634,23 @@ public class LyceumTestProfile extends Base {
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.getImagePhoto());
+		Assert.assertTrue(dashboard.getImagePhoto());
 		// /////////////////////////////////////////////////////////
 		EditProfilePage editprof = dashboard.goToEditPage(
 				Constants.EditByXPath, driver);
 
-		assertTrue(editprof.checkAvarar());
-		assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
+		Assert.assertTrue(editprof.checkAvarar());
+		Assert.assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
 		InfoProfilePage infoprof = editprof.setLang("Русский");
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(infoprof.checkEnglLang().contains(
+		Assert.assertTrue(infoprof.checkEnglLang().contains(
 				"Год поступления: 2013 - 2014"));
 
 	}
 
 	// US#34 test 34.8.2
 	@Test
-	public void testSetUkrLang() {
+	public void testSetUkrLangPupil() {
 		// //////////////////////////////////////////////////////////
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -660,33 +660,33 @@ public class LyceumTestProfile extends Base {
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
-		assertTrue(dashboard.getImagePhoto());
+		Assert.assertTrue(dashboard.getImagePhoto());
 		// /////////////////////////////////////////////////////////
 		EditProfilePage editprof = dashboard.goToEditPage(
 				Constants.EditByXPath, driver);
 
-		assertTrue(editprof.checkAvarar());
-		assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
+		Assert.assertTrue(editprof.checkAvarar());
+		Assert.assertTrue(editprof.checkPupilName().contains("Іванов Микита"));
 		InfoProfilePage infoprof = editprof.setLang("Українська");
 		editprof.FindAndClick(Constants.SaveByID, driver);
-		assertTrue(infoprof.checkEnglLang().contains("Рік вступу: 2013 - 2014"));
+		Assert.assertTrue(infoprof.checkEnglLang().contains("Рік вступу: 2013 - 2014"));
 
 	}
 
 	@Test
-	public void testMyLyceumtesSubMenu() {
+	public void testMyLyceumtesSubMenuPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
@@ -696,19 +696,19 @@ public class LyceumTestProfile extends Base {
 	}
 
 	@Test
-	public void testMyTeachersSubmenu() {
+	public void testMyTeachersSubmenuPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
@@ -719,19 +719,19 @@ public class LyceumTestProfile extends Base {
 	}
 
 	@Test
-	public void testMyOlympiadsSubmenu() {
+	public void testMyOlympiadsSubmenuPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
@@ -742,19 +742,19 @@ public class LyceumTestProfile extends Base {
 	}
 
 	@Test
-	public void testEnteranceSubmenu() {
+	public void testEnteranceSubmenuPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
@@ -763,19 +763,19 @@ public class LyceumTestProfile extends Base {
 	}
 
 	@Test
-	public void testContactsSubmenu() {
+	public void testContactsSubmenuPupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 
 		MainDashboardPage lpage = loginPage.goToLogin(
 				Constants.EnterByLinkText, driver);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		assertTrue(loginPage.checkEmailLabel());
-		assertTrue(loginPage.checkTitleLabel());
-		assertTrue(loginPage.checkLoginEdit());
-		assertTrue(loginPage.checkPasswordEdit());
-		assertTrue(loginPage.checkEnterBtn());
-		assertTrue(loginPage.checkRegLink());
+		Assert.assertTrue(loginPage.checkEmailLabel());
+		Assert.assertTrue(loginPage.checkTitleLabel());
+		Assert.assertTrue(loginPage.checkLoginEdit());
+		Assert.assertTrue(loginPage.checkPasswordEdit());
+		Assert.assertTrue(loginPage.checkEnterBtn());
+		Assert.assertTrue(loginPage.checkRegLink());
 
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin, Constants.PupilPassword);
@@ -786,7 +786,7 @@ public class LyceumTestProfile extends Base {
 
 	// US#36 tests 36.2.1 -36.5.1;
 	@Test
-	public void testTransitionToTheSchedule() {
+	public void testTransitionToTheSchedulePupil() {
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
 		MainDashboardPage lpage = loginPage.goToLogin(
@@ -795,13 +795,13 @@ public class LyceumTestProfile extends Base {
 		MainDashboardPage dashboard = loginPage.LogInAction(
 				Constants.PupilLogin2, Constants.PupilPassword);
 
-		assertTrue(dashboard.checkDashboardSchedule());
+		Assert.assertTrue(dashboard.checkDashboardSchedule());
 		SchedulePage schedule = dashboard.goToSchedulePage();
-		assertTrue(schedule.checkScheduleURL());
-		assertTrue(schedule.checkTiele());
-		assertTrue(schedule.checkHeader());
-		assertTrue(schedule.checkMenuExist());
-		assertTrue(schedule.checkPhoto());
+		Assert.assertTrue(schedule.checkScheduleURL());
+		Assert.assertTrue(schedule.checkTiele());
+		Assert.assertTrue(schedule.checkHeader());
+		Assert.assertTrue(schedule.checkMenuExist());
+		Assert.assertTrue(schedule.checkPhoto());
 		schedule.checkLinks("Шевченко Андрій", "Edit", "Sign out",
 				"Developers page", "VK - group", "My Lyceum", "Teachers",
 				"Olympiads", "Enterance", "Contacts");
@@ -810,7 +810,7 @@ public class LyceumTestProfile extends Base {
 	
 	// US#36 tests 36.2.1 -36.5.1;
 		@Test
-		public void testTransitionToTheSchedule2() {
+		public void testTransitionToTheSchedule2Pupil() {
 			driver.get(Constants.inetURL);
 			LoginPage loginPage = new LoginPage(driver);
 			MainDashboardPage lpage = loginPage.goToLogin(
@@ -819,13 +819,13 @@ public class LyceumTestProfile extends Base {
 			MainDashboardPage dashboard = loginPage.LogInAction(
 					Constants.PupilLogin, Constants.PupilPassword);
 
-			assertTrue(dashboard.checkDashboardSchedule());
+			Assert.assertTrue(dashboard.checkDashboardSchedule());
 			SchedulePage schedule = dashboard.goToSchedulePage();
-			assertTrue(schedule.checkScheduleURL());
-			assertTrue(schedule.checkTiele());
-			assertTrue(schedule.checkHeader());
-			assertTrue(schedule.checkMenuExist());
-			assertTrue(schedule.checkPhoto());
+			Assert.assertTrue(schedule.checkScheduleURL());
+			Assert.assertTrue(schedule.checkTiele());
+			Assert.assertTrue(schedule.checkHeader());
+			Assert.assertTrue(schedule.checkMenuExist());
+			Assert.assertTrue(schedule.checkPhoto());
 			schedule.checkLinks("Іванов Микита", "Edit", "Sign out",
 					"Developers page", "VK - group", "My Lyceum", "Teachers",
 					"Olympiads", "Enterance", "Contacts");
@@ -834,7 +834,7 @@ public class LyceumTestProfile extends Base {
 
 	// US#36 tests: 36.5.2-36.5.6;
 	@Test
-	public void testTransitionToTheAllMenuFromSchedulePage() {
+	public void testTransitionToTheAllMenuFromSchedulePagePupil() {
 
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -846,14 +846,14 @@ public class LyceumTestProfile extends Base {
 
 		dashboard.FindAndClick(Constants.MyLyseiumByXPath, driver);
 
-		assertTrue(dashboard.checkMainDashURL());
+		Assert.assertTrue(dashboard.checkMainDashURL());
 
 		dashboard.goToSchedulePage();
 
 		TeachersPage teachers = dashboard.goToPage(Constants.TeachercByXPath,
 				driver);
 
-		assertTrue(teachers.checkTeacherURL());
+		Assert.assertTrue(teachers.checkTeacherURL());
 		// /////////////////////////////////
 		dashboard.FindAndClick(Constants.MyLyseiumByXPath, driver);
 		dashboard.goToSchedulePage();
@@ -862,7 +862,7 @@ public class LyceumTestProfile extends Base {
 		OlymliadsPage olymp = dashboard.goToPageOlymp(
 				Constants.OlimliadsByXPath, driver);
 
-		assertTrue(olymp.OlymliadsURL());
+		Assert.assertTrue(olymp.OlymliadsURL());
 
 		// /////////////////////////////////
 		dashboard.FindAndClick(Constants.MyLyseiumByXPath, driver);
@@ -872,7 +872,7 @@ public class LyceumTestProfile extends Base {
 		EnterancePage enterance = dashboard.goToPageEnterance(
 				Constants.EnteranceByXPath, driver);
 
-		assertTrue(enterance.EnteranceURL());
+		Assert.assertTrue(enterance.EnteranceURL());
 
 		// /////////////////////////////////
 		dashboard.FindAndClick(Constants.MyLyseiumByXPath, driver);
@@ -881,8 +881,8 @@ public class LyceumTestProfile extends Base {
 		ContactsPage contacts = dashboard.goToPageContacts(
 				Constants.ContactsByXPath, driver);
 
-		assertTrue(contacts.ContactsURL());
+		Assert.assertTrue(contacts.ContactsURL());
 
 	}
-*/
+
 }
