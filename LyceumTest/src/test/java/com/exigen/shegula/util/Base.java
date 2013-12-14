@@ -11,13 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-import com.exigen.shegula.Constants;
-
 public class Base {
 	protected WebDriver driver;
 
 	@BeforeMethod()
-
 	@Parameters("browser")
 	public void launchBrowser(@Optional("FF") String browser) {
 
