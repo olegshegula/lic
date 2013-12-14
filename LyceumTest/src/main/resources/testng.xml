@@ -82,5 +82,30 @@
 			</class>
 		</classes>
 	</test>
+	
+	
+	
+	<test verbose="2" name="testAuthenticationPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testAuthenticationPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test verbose="2" name="testSignOutPupil">
+		<classes>
+			<class name="com.exigen.shegula.tests.LyceumTestProfile">
+				<methods>
+					<include name="testSignOutPupil" />
+				</methods>
+			</class>
+		</classes>
+	</test>
 </suite> 
+
+
+
 
