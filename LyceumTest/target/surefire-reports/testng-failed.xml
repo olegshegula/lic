@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [DS suite]">
+  <test name="testCheckWrapper(failed)">
+    <classes>
+      <class name="com.exigen.shegula.tests.LyceumTestProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.LyceumTestProfile -->
+      <class name="com.exigen.shegula.tests.DSTestProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="testCheckWrapper"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
+    </classes>
+  </test> <!-- testCheckWrapper(failed) -->
+  <test name="testCheckWrapperDirector(failed)">
+    <classes>
+      <class name="com.exigen.shegula.tests.LyceumTestProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.LyceumTestProfile -->
+      <class name="com.exigen.shegula.tests.DSTestProfile">
+        <methods>
+          <include name="testCheckWrapperDirector"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
+    </classes>
+  </test> <!-- testCheckWrapperDirector(failed) -->
+  <test name="testCheckWrapperEditDSPage(failed)">
+    <classes>
+      <class name="com.exigen.shegula.tests.LyceumTestProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.LyceumTestProfile -->
+      <class name="com.exigen.shegula.tests.DSTestProfile">
+        <methods>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="launchBrowser"/>
+          <include name="testCheckWrapperEditDSPage"/>
+        </methods>
+      </class> <!-- com.exigen.shegula.tests.DSTestProfile -->
+    </classes>
+  </test> <!-- testCheckWrapperEditDSPage(failed) -->
+</suite> <!-- Failed suite [DS suite] -->
