@@ -209,41 +209,47 @@ public class DSTestProfile extends Base {
 		Assert.assertTrue(main.isHeaderExist());
 
 	}
-	/*
-	 * @Test public void testMainMenuClick() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class); Assert.assertTrue(main.isPageOpened());
-	 * Assert.assertTrue(main.isTextPresent("Серебрянська Ольга Миколаївна"));
-	 * Assert.assertTrue(main.isTextPresent("Edit"));
-	 * Assert.assertTrue(main.isTextPresent("Sign out"));
-	 * Assert.assertTrue(main.isTextPresent("Exigen Agile Practice (c)"));
-	 * Assert.assertTrue(main.isTextPresent("Developers page"));
-	 * Assert.assertTrue(main.isTextPresent("VK - group"));
-	 * Assert.assertTrue(main.isTextPresent("My Lyceum"));
-	 * Assert.assertTrue(main.isTextPresent("Teachers"));
-	 * Assert.assertTrue(main.isTextPresent("Olympiads"));
-	 * Assert.assertTrue(main.isTextPresent("Enterance"));
-	 * Assert.assertTrue(main.isTextPresent("Contacts"));
-	 * Assert.assertTrue(main.isHeaderExist());
-	 * 
-	 * main.clickOnMenu("MyLyceum");
-	 * 
-	 * MyLyceumPage myLyc = PageFactory.initElements(driver,
-	 * MyLyceumPage.class); Assert.assertTrue(myLyc.isPageOpened());
-	 * Assert.assertTrue(myLyc.isTextPresent("Серебрянська Ольга Миколаївна"));
-	 * // myLyc.open(Constants.inetURL);
-	 * 
-	 * main.clickOnMenu("Teachers"); TeachersPage teachers =
-	 * PageFactory.initElements(driver, TeachersPage.class);
-	 * 
-	 * Assert.assertTrue(teachers.isPageOpened()); Assert.assertTrue(teachers
-	 * .isTextPresent("Серебрянська Ольга Миколаївна"));
-	 * 
-	 * }
-	 */
+
+	@Test
+	public void testMainMenuClick() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		Assert.assertTrue(main.isPageOpened());
+		Assert.assertTrue(main.isTextPresent("Серебрянська Ольга Миколаївна"));
+		Assert.assertTrue(main.isTextPresent("Edit"));
+		Assert.assertTrue(main.isTextPresent("Sign out"));
+		Assert.assertTrue(main.isTextPresent("Exigen Agile Practice (c)"));
+		Assert.assertTrue(main.isTextPresent("Developers page"));
+		Assert.assertTrue(main.isTextPresent("VK - group"));
+		Assert.assertTrue(main.isTextPresent("My Lyceum"));
+		Assert.assertTrue(main.isTextPresent("Teachers"));
+		Assert.assertTrue(main.isTextPresent("Olympiads"));
+		Assert.assertTrue(main.isTextPresent("Enterance"));
+		Assert.assertTrue(main.isTextPresent("Contacts"));
+		Assert.assertTrue(main.isHeaderExist());
+
+		main.clickOnMenu(1);
+
+		MyLyceumPage myLyc = PageFactory.initElements(driver,
+				MyLyceumPage.class);
+		Assert.assertTrue(myLyc.isPageOpened());
+		Assert.assertTrue(myLyc.isTextPresent("Серебрянська Ольга Миколаївна"));
+
+		main.clickOnMenu(2);
+		TeachersPage teachers = PageFactory.initElements(driver,
+				TeachersPage.class);
+
+		Assert.assertTrue(teachers.isPageOpened());
+		Assert.assertTrue(teachers
+				.isTextPresent("Серебрянська Ольга Миколаївна"));
+
+	}
+
 }

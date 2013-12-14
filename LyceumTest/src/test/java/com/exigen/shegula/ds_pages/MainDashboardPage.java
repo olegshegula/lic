@@ -28,13 +28,13 @@ public class MainDashboardPage extends PageBase {
 	private WebElement MyLyceum;
 	@FindBy(xpath = "//a[@href='/en/Teacher']")
 	private WebElement Teachers;
-	
+
 	@FindBy(xpath = "//a[@href='/en/Olympiad']")
 	private WebElement Olympiads;
-	
+
 	@FindBy(xpath = "//a[@href='/en/Enterance']")
 	private WebElement Enterance;
-	
+
 	@FindBy(xpath = "//a[@href='/en/Contacts']")
 	private WebElement Contacts;
 
@@ -96,27 +96,27 @@ public class MainDashboardPage extends PageBase {
 		return sonar.toString();
 
 	}
-/*
-	public void clickOnMenu(String text) {
+
+	public void clickOnMenu(int text) {
 		switch (text) {
-		case "MyLyceum":
+		case 1:
 			MyLyceum.click();
 			break;
-		case "Teachers":
+		case 2:
 			Teachers.click();
 
 			break;
-		case "Olympiads":
+		case 3:
 			Olympiads.click();
 			break;
 
-		case "Enterance":
+		case 4:
 			Enterance.click();
 			break;
-		case "Contacts":
+		case 5:
 			Contacts.click();
 			break;
 		}
 	}
-*/
+
 }
