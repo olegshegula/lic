@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-
 import org.testng.annotations.Test;
 
 import com.exigen.shegula.ds_pages.DirectorInfoPage;
@@ -77,43 +76,50 @@ public class DSTestProfile extends Base {
 		Assert.assertEquals(infoPage.getInfo().getText(), "Some info...");
 	}
 
+	@Test
+	public void testSaveSchedule() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		main.goToSchecule();
+		SchedulePage schedule = PageFactory.initElements(driver,
+				SchedulePage.class);
+
+		Assert.assertTrue(schedule.isPageOpened());
+		schedule.goToEditSchedule();
+		EditSchedulePage edschedule = PageFactory.initElements(driver,
+				EditSchedulePage.class);
+		edschedule.isPageOpened();
+		PageBase.waitForElementPresent(driver, By.id("saveScheduleBtn"), 15);
+		edschedule.clickSaveBtn();
+		PageBase.waitForElementPresent(driver, By.id("message-dialog"), 15);
+
+	}
+
+	@Test
+	public void testCheckWrapper() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		Assert.assertEquals(main.checkWrapperLocation(), "(292, 662)");
+		Assert.assertEquals(main.checkBannerLocation(), "Error");
+
+	}
 	/*
-	 * 
-	 * @Test public void testSaveSchedule() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна"); main.goToSchecule();
-	 * SchedulePage schedule = PageFactory.initElements(driver,
-	 * SchedulePage.class);
-	 * 
-	 * Assert.assertTrue(schedule.isPageOpened()); schedule.goToEditSchedule();
-	 * EditSchedulePage edschedule = PageFactory.initElements(driver,
-	 * EditSchedulePage.class); edschedule.isPageOpened();
-	 * PageBase.waitForElementPresent(driver, By.id("saveScheduleBtn"), 15);
-	 * edschedule.clickSaveBtn(); PageBase.waitForElementPresent(driver,
-	 * By.id("message-dialog"), 15);
-	 * 
-	 * }
-	 * 
-	 * @Test public void testCheckWrapper() {
-	 * 
-	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
-	 * mainPage.switchLang(1); mainPage.logIn(); LoginPage loginPage =
-	 * PageFactory.initElements(driver, LoginPage.class);
-	 * Assert.assertTrue(loginPage.isPageOpened()); loginPage.login();
-	 * MainDashboardPage main = PageFactory.initElements(driver,
-	 * MainDashboardPage.class);
-	 * main.isTextPresent("Серебрянська Ольга Миколаївна");
-	 * Assert.assertEquals(main.checkWrapperLocation(), "(292, 662)");
-	 * Assert.assertEquals(main.checkBannerLocation(), "Error");
-	 * 
-	 * }
-	 * 
 	 * @Test public void testCheckWrapperDirector() {
 	 * 
 	 * MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
