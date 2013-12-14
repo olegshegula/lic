@@ -69,7 +69,7 @@ public class LyceumTestProfile extends Base {
 
 	// US#34 test 34.8.3
 	@Test
-	public void testSetEngLang() {
+	public void testSetEngLangPupil() {
 		// //////////////////////////////////////////////////////////
 		driver.get(Constants.inetURL);
 		LoginPage loginPage = new LoginPage(driver);
@@ -94,7 +94,7 @@ public class LyceumTestProfile extends Base {
 	}
 	// US#34 test 34.8.3
 		@Test
-		public void testSetEngLang2() {
+		public void testSetEngLang2Pupil() {
 			// //////////////////////////////////////////////////////////
 			driver.get(Constants.inetURL);
 			LoginPage loginPage = new LoginPage(driver);
