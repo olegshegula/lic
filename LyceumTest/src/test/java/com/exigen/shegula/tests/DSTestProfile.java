@@ -251,5 +251,32 @@ public class DSTestProfile extends Base {
 				.isTextPresent("Серебрянська Ольга Миколаївна"));
 
 	}
+	
+	@Test
+	public void testFillScheduleCorrect() {
+
+		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
+		mainPage.switchLang(1);
+		mainPage.logIn();
+		LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+		Assert.assertTrue(loginPage.isPageOpened());
+		loginPage.login();
+		MainDashboardPage main = PageFactory.initElements(driver,
+				MainDashboardPage.class);
+		main.isTextPresent("Серебрянська Ольга Миколаївна");
+		main.goToSchecule();
+		SchedulePage schedule = PageFactory.initElements(driver,
+				SchedulePage.class);
+
+		Assert.assertTrue(schedule.isPageOpened());
+		schedule.goToEditSchedule();
+		EditSchedulePage edschedule = PageFactory.initElements(driver,
+				EditSchedulePage.class);
+		edschedule.isPageOpened();
+		
+		//edschedule.clickSaveBtn();
+		
+
+	}
 
 }

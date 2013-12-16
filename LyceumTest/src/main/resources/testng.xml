@@ -82,6 +82,21 @@
 			</class>
 		</classes>
 	</test>
+	<test verbose="2" name="testFillScheduleCorrect">
+		<classes>
+			<class name="com.exigen.shegula.tests.DSTestProfile">
+				<methods>
+					<include name="testFillScheduleCorrect" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	
+	
+	
+	
+	
 	
 	
 	
