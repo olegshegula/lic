@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import com.exigen.shegula.util.Constants;
+
 public class EditProfilePage {
 
 	private WebDriver driver;

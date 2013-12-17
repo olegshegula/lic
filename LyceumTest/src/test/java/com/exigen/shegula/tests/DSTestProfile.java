@@ -251,9 +251,9 @@ public class DSTestProfile extends Base {
 				.isTextPresent("Серебрянська Ольга Миколаївна"));
 
 	}
-	
+
 	@Test
-	public void testFillScheduleCorrect() {
+	public void testFillSchedule8AMonday() {
 
 		MainPage mainPage = PageFactory.initElements(driver, MainPage.class);
 		mainPage.switchLang(1);
@@ -273,10 +273,23 @@ public class DSTestProfile extends Base {
 		EditSchedulePage edschedule = PageFactory.initElements(driver,
 				EditSchedulePage.class);
 		edschedule.isPageOpened();
-		
-		//edschedule.clickSaveBtn();
-		
 
+		edschedule.setFirstSubject("Математика");
+		edschedule.setFirstTeacher("Ургант Іван");
+		edschedule.setFirstLessClass("25");
+
+		edschedule.setSecondSubject("Програмування");
+		edschedule.setSecondTeacher("Федорів Іван");
+		edschedule.setSecondLessClass("65");
+
+		edschedule.setThirdSubject("Англійська");
+		edschedule.setThirdTeacher("Сагайдачний Петро");
+		edschedule.setThirdLessClass("101");
+
+		edschedule.setForthSubject("Історія");
+		edschedule.setForthTeacher("Поляков Олег Володимирович");
+		edschedule.setForthLessClass("145");
+
+		edschedule.clickSaveBtn();
 	}
-
 }
