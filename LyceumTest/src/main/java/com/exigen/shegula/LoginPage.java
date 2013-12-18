@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import com.exigen.shegula.Constants;
+import com.exigen.shegula.util.Constants;
 
 public class LoginPage {
 

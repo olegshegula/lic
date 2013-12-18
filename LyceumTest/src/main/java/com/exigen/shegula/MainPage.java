@@ -2,6 +2,8 @@ package com.exigen.shegula;
 
 import org.openqa.selenium.WebDriver;
 
+import com.exigen.shegula.util.Constants;
+
 public class MainPage {
 	private WebDriver driver;
 

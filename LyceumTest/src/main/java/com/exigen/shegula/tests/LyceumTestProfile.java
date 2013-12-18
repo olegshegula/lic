@@ -3,9 +3,11 @@
  */
 package com.exigen.shegula.tests;
 import org.testng.Assert;
+
 import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.Test;
-import com.exigen.shegula.Constants;
+
 import com.exigen.shegula.ContactsPage;
 import com.exigen.shegula.EditProfilePage;
 import com.exigen.shegula.EnterancePage;
@@ -17,6 +19,7 @@ import com.exigen.shegula.OlymliadsPage;
 import com.exigen.shegula.SchedulePage;
 import com.exigen.shegula.TeachersPage;
 import com.exigen.shegula.util.Base;
+import com.exigen.shegula.util.Constants;
 
 /**
  * @author shcegula-os
