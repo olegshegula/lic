@@ -9,8 +9,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.8.7</version>
-			<scope>test</scope>
+			<version>6.8.7</version>			
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -29,8 +28,7 @@
 						<suiteXmlFile>src/main/resources/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
-			</plugin>
-			
+			</plugin>			
 		</plugins>
 	</build>
 </project>
