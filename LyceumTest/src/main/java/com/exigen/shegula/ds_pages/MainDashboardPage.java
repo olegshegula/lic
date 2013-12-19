@@ -104,8 +104,8 @@ public class MainDashboardPage extends PageBase {
 			break;
 		case 2:
 			Teachers.click();
-
 			break;
+			
 		case 3:
 			Olympiads.click();
 			break;

@@ -3,7 +3,6 @@ package com.exigen.shegula.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-
 import org.testng.annotations.Test;
 
 import com.exigen.shegula.ds_pages.DirectorInfoPage;
@@ -15,6 +14,7 @@ import com.exigen.shegula.ds_pages.LoginPage;
 import com.exigen.shegula.ds_pages.MainDashboardPage;
 import com.exigen.shegula.ds_pages.MainPage;
 import com.exigen.shegula.ds_pages.MyLyceumPage;
+import com.exigen.shegula.ds_pages.OlympiadsPage;
 import com.exigen.shegula.ds_pages.SchedulePage;
 import com.exigen.shegula.ds_pages.TeachersPage;
 import com.exigen.shegula.util.Base;
@@ -241,13 +241,21 @@ public class DSTestProfile extends Base {
 				MyLyceumPage.class);
 		Assert.assertTrue(myLyc.isPageOpened());
 		Assert.assertTrue(myLyc.isTextPresent("Серебрянська Ольга Миколаївна"));
-
+		
 		main.clickOnMenu(2);
 		TeachersPage teachers = PageFactory.initElements(driver,
 				TeachersPage.class);
 
 		Assert.assertTrue(teachers.isPageOpened());
 		Assert.assertTrue(teachers
+				.isTextPresent("Серебрянська Ольга Миколаївна"));
+		
+		main.clickOnMenu(3);
+		//teachers.goToOlymp();
+		OlympiadsPage olympPage = PageFactory.initElements(driver,
+				OlympiadsPage.class);
+		Assert.assertTrue(olympPage.isPageOpened());
+		Assert.assertTrue(olympPage
 				.isTextPresent("Серебрянська Ольга Миколаївна"));
 
 	}

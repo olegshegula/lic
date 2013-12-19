@@ -19,8 +19,7 @@ public class MainPage {
 			engLink.click();
 			break;
 		case 2:
-			rusLink.click();
-			;
+			rusLink.click();			
 			break;
 		case 3:
 			ukrLink.click();
