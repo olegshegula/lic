@@ -5,9 +5,11 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.exigen.shegula.ds_pages.ContactsPage;
 import com.exigen.shegula.ds_pages.DirectorInfoPage;
 import com.exigen.shegula.ds_pages.EditProfilePage;
 import com.exigen.shegula.ds_pages.EditSchedulePage;
+import com.exigen.shegula.ds_pages.EnterancePage;
 import com.exigen.shegula.ds_pages.GuestPage;
 import com.exigen.shegula.ds_pages.InfoProfilePage;
 import com.exigen.shegula.ds_pages.LoginPage;
@@ -241,7 +243,7 @@ public class DSTestProfile extends Base {
 				MyLyceumPage.class);
 		Assert.assertTrue(myLyc.isPageOpened());
 		Assert.assertTrue(myLyc.isTextPresent("Серебрянська Ольга Миколаївна"));
-		
+
 		main.clickOnMenu(2);
 		TeachersPage teachers = PageFactory.initElements(driver,
 				TeachersPage.class);
@@ -249,13 +251,29 @@ public class DSTestProfile extends Base {
 		Assert.assertTrue(teachers.isPageOpened());
 		Assert.assertTrue(teachers
 				.isTextPresent("Серебрянська Ольга Миколаївна"));
-		
+
 		main.clickOnMenu(3);
-		//teachers.goToOlymp();
+
 		OlympiadsPage olympPage = PageFactory.initElements(driver,
 				OlympiadsPage.class);
 		Assert.assertTrue(olympPage.isPageOpened());
 		Assert.assertTrue(olympPage
+				.isTextPresent("Серебрянська Ольга Миколаївна"));
+
+		main.clickOnMenu(4);
+
+		EnterancePage enterancePage = PageFactory.initElements(driver,
+				EnterancePage.class);
+		Assert.assertTrue(enterancePage.isPageOpened());
+		Assert.assertTrue(enterancePage
+				.isTextPresent("Серебрянська Ольга Миколаївна"));
+
+		main.clickOnMenu(5);
+
+		ContactsPage contPage = PageFactory.initElements(driver,
+				ContactsPage.class);
+		Assert.assertTrue(contPage.isPageOpened());
+		Assert.assertTrue(contPage
 				.isTextPresent("Серебрянська Ольга Миколаївна"));
 
 	}

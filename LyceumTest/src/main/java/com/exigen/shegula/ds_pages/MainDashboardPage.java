@@ -32,7 +32,7 @@ public class MainDashboardPage extends PageBase {
 	@FindBy(xpath = "//a[@href='/en/Olympiad']")
 	private WebElement Olympiads;
 
-	@FindBy(xpath = "//a[@href='/en/Enterance']")
+	@FindBy(xpath = "//a[contains(@href,'Entrance')]")
 	private WebElement Enterance;
 
 	@FindBy(xpath = "//a[@href='/en/Contacts']")
